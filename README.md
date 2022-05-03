@@ -1,4 +1,4 @@
-#Trybe - Exercícios
+#Trybe - Exercícios!
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Humberto de Oliveira Araújo](https://www.linkedin.com/in/humbertoaraujo1985/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
