@@ -1,0 +1,27 @@
+h1 {
+    font-family: sans-serif;
+  }
+  body {
+    font-size: 16px;
+  }      
+  p {
+    font-weight: 600;
+    text-decoration: underline;
+    font-size: 3em;        
+  }
+  
+  #listAmarelo {
+    background-color: yellow;
+  }
+  #listVermelho {
+    background-color: red;
+  }
+  #listMarrom {
+    background-color: #964b00;
+  }
+  body {
+    font-style: italic;
+    line-height: 100px;
+    text-align: center;
+    
+  }
