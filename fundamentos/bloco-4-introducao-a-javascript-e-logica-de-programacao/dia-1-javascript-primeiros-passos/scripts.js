@@ -1,18 +1,8 @@
-// let patientId = 50;
-// let isEnrolled = true;
-// const patientInfo = {
-//   firstName: 'Ana',
-//   lastName: 'Santos',
-// };
-// const patientEmail = 'ana@email.com';
-// console.log(typeof patientId, typeof isEnrolled, typeof patientInfo, typeof patientEmail);
-// console.log(typeof patientAge) 
-// patientId = '50';
-// console.log(typeof patientId, typeof isEnrolled, typeof patientInfo, typeof patientEmail);
-
-const base = 5;
-let heigth = 8;
-const area = base * heigth;
-console.log(area);
-const perimeter = 4 + 4 + 4 + 4;
-console.log(perimeter);
+const nota = 59;
+if (nota >= 80) {
+    console.log("Parabéns, você foi aprovada(o)!");
+} else if (nota >= 60) {
+    console.log("Você está na nossa lista de espera");
+}else {
+    console.log("Você foi reprovada(o)");
+}
