@@ -1,6 +1,6 @@
 
 
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //Exercício 1
 // for (let number of numbers ){
@@ -83,3 +83,31 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // for (number of newArray){
 //     console.log(number / 2);
 // }
+
+// Bônus
+// Exercício 1
+
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// numbers.sort((a,b) => {
+//     return a-b;
+// })
+// console.log(numbers);
+
+// Exercício 2
+
+// numbers.sort((a,b) => {
+//     return b-a;
+// })
+// console.log(numbers);
+
+// Exercício 3
+
+let newArray = [];
+for (let index = 0; index < numbers.length; index += 1){
+    if (numbers[index + 1] == null){
+        newArray.push(numbers[index]*2)
+    } else {
+        newArray.push(numbers[index] * numbers[index+1])
+    }
+}
+console.log(newArray);
