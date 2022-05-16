@@ -38,17 +38,56 @@
 //     }
 // }
 // console.log(menorPalavra);
-const number = 50;
-let count = 0;
-for (let index = number; index >= 2; index -= 1){
-    for (let index2 = 1; index2 <= index; index2 += 1){
-        if (index % index2 === 0){
-            count += 1;
-        }        
-    }
-    if(count == 2) {
-        console.log("O Maior número primo de 0 até 50 é: ", index);
-        break
-    }
-    count = 0;
-} 
+// const number = 50;
+// let count = 0;
+// for (let index = number; index >= 2; index -= 1){
+//     for (let index2 = 1; index2 <= index; index2 += 1){
+//         if (index % index2 === 0){
+//             count += 1;
+//         }        
+//     }
+//     if(count == 2) {
+//         console.log("O Maior número primo de 0 até 50 é: ", index);
+//         break
+//     }
+//     count = 0;
+// } 
+// Bônus
+// Exercício 1
+// let n = 5;
+// let aux = '';
+// for (let index = 0; index < n; index += 1){
+//     for (let index2 = 0; index2 < n; index2 += 1){
+//         aux += "*"
+//     }
+//     console.log(aux);
+//     aux = '';
+// }
+// Exercício 2
+// const n = 5;
+// let aux = '';
+// for (let index = 0; index < n; index += 1){
+//     for (let index2 = 0; index2 <= index; index2 += 1){
+//         aux += "*"
+//     }
+//     console.log(aux);
+//     aux = '';
+// }
+// Exercício 3
+// const n = 5;
+// let aux = '';
+// let aux2 = n;
+// for (let index = 0; index < n; index += 1){
+//     for (let index2 = 0; index2 <= n; index2 += 1){
+//         if(index2 < aux2){
+//             aux += ' '; 
+//         }else {
+//         aux += "*";
+//         }
+//     }
+//     console.log(aux);
+//     aux = '';
+//     aux2 -= 1;
+// }
+
+// Exercício 3
