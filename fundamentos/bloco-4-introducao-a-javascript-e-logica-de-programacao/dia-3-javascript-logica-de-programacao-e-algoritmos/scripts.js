@@ -38,3 +38,17 @@
 //     }
 // }
 // console.log(menorPalavra);
+const number = 50;
+let count = 0;
+for (let index = number; index >= 2; index -= 1){
+    for (let index2 = 1; index2 <= index; index2 += 1){
+        if (index % index2 === 0){
+            count += 1;
+        }        
+    }
+    if(count == 2) {
+        console.log("O Maior número primo de 0 até 50 é: ", index);
+        break
+    }
+    count = 0;
+} 
