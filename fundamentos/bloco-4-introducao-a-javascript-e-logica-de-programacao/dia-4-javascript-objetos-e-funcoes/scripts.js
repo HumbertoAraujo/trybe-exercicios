@@ -129,5 +129,41 @@
 // for (let key in car){
 //     console.log(key, car[key]);
 // }
+// let nome = 'João';
+// console.log('Bom dia, ' + nome);
+// // Com função
+// function bomDiaTryber(nome) {
+//   console.log('Bom dia, ' + nome);
+// }
+// bomDiaTryber('João'); 
+// bomDiaTryber('Julia'); 
+// bomDiaTryber('Marcelo');
 
+// let estado = 'deslogado';
+// function logarDeslogar() {
+//   if (estado === 'deslogado') {
+//     estado = 'logado';
+// } else {
+//     estado = 'deslogado';
+// }
+// }
+// console.log(estado);
+// logarDeslogar();
+// console.log(estado);
+// logarDeslogar();
+// console.log(estado); 
+// // console.log('O usuário está ' + estado); 
+
+// function maiorNum(primeiroNum, segundoNum) {
+//     if (primeiroNum > segundoNum) {
+//         return primeiroNum + ' é maior que ' + segundoNum;
+//     } else if (segundoNum > primeiroNum) {
+//         return segundoNum + ' é maior que ' + primeiroNum;
+//     } else {
+//     return 'Os números são iguais';
+//     }
+//     }
+// console.log(maiorNum(10, 20)); 
+// console.log(maiorNum(2, -5)); 
+// console.log(maiorNum(1, 1)); 
 
