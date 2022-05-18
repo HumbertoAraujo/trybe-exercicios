@@ -167,3 +167,102 @@
 // console.log(maiorNum(2, -5)); 
 // console.log(maiorNum(1, 1)); 
 
+
+// let a = "Serei a melhor pessoa dev";
+// let b = "Esse é meu jeito dev de ser!";
+// let num = 2;
+// let strings = [a, b];
+
+
+// console.log((typeof strings.length) == (typeof num));
+
+// let info = {
+//     personagem: 'Margarida',
+//     origem: 'Pato Donald',
+//     nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+// };
+
+// Exercício 1
+
+// console.log('Bem vinda, ' + info.personagem)
+
+// Exercício 2
+
+// info.recorrente = 'Sim';
+// console.log(info);
+
+// Exercício 3
+
+// for (let key in info){
+//     console.log(key);
+// }
+
+// Exercício 4
+
+// for (let key in info){
+//     console.log(info[key]);
+// }
+
+// Exercício 5
+
+// let info2 = {
+//     personagem: 'Tio Patinhas',
+//     origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+//     nota: 'O último MacPatinhas',
+//     recorrente : 'Sim'
+// };
+// for (let key in info){
+//     if (info[key] === 'Sim' && info2[key] === 'Sim'){
+//         console.log('Ambos recorrentes');
+//     } else {
+//     console.log (info[key] + ' e ' + info2[key]);
+//     }    
+// }
+
+// Exercício 6
+
+// let leitor = {
+//     nome: 'Julia',
+//     sobrenome: 'Pessoa',
+//     idade: 21,
+//     livrosFavoritos: [
+//       {
+//         titulo: 'O Pior Dia de Todos',
+//         autor: 'Daniela Kopsch',
+//         editora: 'Tordesilhas',
+//       },
+//     ],
+//   };
+
+//  console.log("O livro favorito de " + leitor.nome + " " + leitor.sobrenome + " se chama " + "'" + leitor.livrosFavoritos[0].titulo + "'");
+
+ // Exercício 7
+
+//  let leitor = {
+//     nome: 'Julia',
+//     sobrenome: 'Pessoa',
+//     idade: 21,
+//     livrosFavoritos: [
+//       {
+//         titulo: 'O Pior Dia de Todos',
+//         autor: 'Daniela Kopsch',
+//         editora: 'Tordesilhas',
+//       },
+//     ],
+//   };
+
+//  leitor.livrosFavoritos.push( {
+//     titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//     autor: 'JK Rowling',
+//     editora: 'Rocco',
+//   });
+//   console.log('"' + leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos" + '"');
+
+
+
+
+
+
+
+
+
