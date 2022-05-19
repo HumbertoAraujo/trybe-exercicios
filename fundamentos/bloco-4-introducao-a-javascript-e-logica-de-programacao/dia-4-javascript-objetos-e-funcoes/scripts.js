@@ -258,11 +258,29 @@
 //   });
 //   console.log('"' + leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos" + '"');
 
+// verificaPalindrome('arara');
 
+// function verificaPalindrome(palavra) {
+//     let aux = [];
+//     for (let letra of palavra){
+//        aux.push(letra);
+//      }
+//      let palavraContrario = (aux.reverse().toString().replace(/,/g, ""));
+//      if (palavraContrario === palavra){
+//        console.log(true);
+//      } else {
+//       console.log(false);
+//      }
+// }
 
+verificaPalindrome('arara');
 
-
-
-
-
+function verificaPalindrome(palavra) {
+     palavraContrario = (palavra.split("").reverse().join(""));
+     if (palavraContrario === palavra){
+       console.log(true);
+     } else {
+      console.log(false);
+     }
+}
 
