@@ -71,7 +71,9 @@
         }
         
         function five(){
-        document.getElementsByTagName('p')[0].innerText = (document.getElementsByTagName('p')[0].innerText.toUpperCase());
+         for (index = 0; index < document.getElementsByTagName('p').length; index += 1){
+          document.getElementsByTagName('p')[index].innerText = (document.getElementsByTagName('p')[index].innerText.toUpperCase());
+         }
         }
 
         function six(){
