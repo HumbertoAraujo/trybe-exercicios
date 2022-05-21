@@ -1,48 +1,67 @@
-// // 1
-const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+// // // 1
+// const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
 // // 2
-const pai =  elementoOndeVoceEsta.parentElement;
+// let pai =  elementoOndeVoceEsta.parentElement;
 // pai.style.color = 'red';
-// // 3
-const primeiroFilhodoFilho = elementoOndeVoceEsta.firstElementChild;
+// // // 3
+// const primeiroFilhodoFilho = elementoOndeVoceEsta.firstElementChild;
 // primeiroFilhodoFilho.innerText = 'Texto de Teste';
 
-// // 4
-// console.log(pai.firstElementChild);
+// // // 4
+// // console.log(pai.firstElementChild);
 
-// // 5
-// console.log(elementoOndeVoceEsta.previousElementSibling);
+// // // 5
+// // console.log(elementoOndeVoceEsta.previousElementSibling);
 
-// // 6
+// // // 6
 // const textAttention = elementoOndeVoceEsta.nextSibling
-// console.log(textAttention)
+// // console.log(textAttention)
 
-// // 7
-// console.log(elementoOndeVoceEsta.nextElementSibling );
+// // // 7
+// // console.log(elementoOndeVoceEsta.nextElementSibling );
 
-// // 8
-// console.log(pai.lastElementChild.previousElementSibling);
+// // // 8
+// // console.log(pai.lastElementChild.previousElementSibling);
 
-// PARTE 2 1
+// // PARTE 2 1
 
-let newBrother = document.createElement('section');
-// newBrother.id('novoIrmao');
-newBrother.id = 'novo-irmao'
-pai.appendChild(newBrother);
-// console.log(newBrother);
+// let newBrother = document.createElement('section');
 
-// PARTE 2 2
+// newBrother.id = 'novo-irmao'
+// pai.appendChild(newBrother);
+// // console.log(newBrother);
 
-let newSon = document.createElement('section');
-newSon.id = 'novo-filho'
-pai.appendChild(newSon);
-// console.log(newSon);
+// // PARTE 2 2
 
-// PARTE 2 3
+// let newSon = document.createElement('section');
+// newSon.id = 'novo-filho'
+// pai.appendChild(newSon);
+// // console.log(newSon);
 
-let newSonofSon = document.createElement('section');
-newSonofSon.id = 'novo-filho-do-primeiro-filho-do-filho'
-primeiroFilhodoFilho.appendChild(newSonofSon);
-// console.log(newSonofSon);
+// // PARTE 2 3
 
-console.log(newSonofSon.parentElement.parentElement.nextElementSibling);
+// let newSonofSon = document.createElement('section');
+// newSonofSon.id = 'novo-filho-do-primeiro-filho-do-filho'
+// primeiroFilhodoFilho.appendChild(newSonofSon);
+// // console.log(newSonofSon);
+
+// // console.log(newSonofSon.parentElement.parentElement.nextElementSibling);
+
+// let newPai =  document.getElementById('pai');
+
+// let todosOsFilhos = newPai.childNodes;
+
+// for (let index = todosOsFilhos.length -1; index >= 0; index -= 1){
+
+
+//     let delFilho = todosOsFilhos[index];
+//     if (delFilho.id !== 'elementoOndeVoceEsta'){
+//     delFilho.remove();
+
+//     }
+
+// }
+// console.log(document.body);
+
+// let delSegundoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+// delSegundoFilho.remove();
