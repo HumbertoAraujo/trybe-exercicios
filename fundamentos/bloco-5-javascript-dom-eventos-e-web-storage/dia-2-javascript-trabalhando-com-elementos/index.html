@@ -155,9 +155,36 @@
 
       for (index = 0; index < 3; index +=1){
         let newH3 = document.createElement('h3');
+        // Parte 2 - Exercicio 2
+        newH3.className = 'description';
         newMain.appendChild(newH3);
       }
 
+      // Parte 2 - Exercicio 1
+
+      h1NewTest.className = 'title';
+
+      // Parte 2 - Exercicio 2 acima no enxercício 9.
+
+      // Parte 2 - Exercicio 3
+      let delSection = document.getElementsByClassName("left-content")[0];
+      newMain.removeChild(delSection);
+
+      // Parte 2 - Exercicio 4
+
+      newSectionthree.style.marginRight = 'auto';
+
+      // Parte 2 - Exercicio 5
+
+      newSectionone.style.backgroundColor = 'green';
+
+      // Parte 2 - Exercicio 6
+
+      let delUltimo = newUl.lastChild;
+      let delPenultimo = delUltimo.previousSibling;
+
+      newUl.removeChild(delUltimo);
+      newUl.removeChild(delPenultimo);
 
       console.log(containnerBody);
     </script>
