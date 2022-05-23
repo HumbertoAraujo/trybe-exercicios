@@ -19,17 +19,17 @@ thirdLi.addEventListener('click', boxUp);
 function boxUp(event){
     let idReceivedClick = event.target.id;
     if (idReceivedClick === 'first-li') {
-        firstLi.className = 'tech';
-        secondLi.className = '';
-        thirdLi.className = '';
+        firstLi.classList.add('tech');
+        secondLi.classList.remove('tech');
+        thirdLi.classList.remove('tech');
     } else if (idReceivedClick === 'second-li') {
-        firstLi.className = '';
-        secondLi.className = 'tech';
-        thirdLi.className = '';
+        firstLi.classList.remove('tech');
+        secondLi.classList.add('tech');
+        thirdLi.classList.remove('tech');
     } else if (idReceivedClick === 'third-li') {
-        firstLi.className = '';
-        secondLi.className = '';
-        thirdLi.className = 'tech';
+        firstLi.classList.remove('tech');
+        secondLi.classList.remove('tech');
+        thirdLi.classList.add('tech');
     }
     
 }
