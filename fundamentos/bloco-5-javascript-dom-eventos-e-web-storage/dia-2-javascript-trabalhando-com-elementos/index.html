@@ -1,0 +1,192 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script src="/scripts.js" > </script>
+</body>
+</html> -->
+
+<!-- //EXERCÍCIOS -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      
+      // 1
+
+      let containnerBody = document.body;
+      let h1NewTest = document.createElement('h1');
+      h1NewTest.innerText = "Exercício 5.2 - JavaScript DOM";
+      containnerBody.appendChild(h1NewTest);
+          
+      // 2
+
+      let newMain = document.createElement('main');
+      newMain.className = "main-content";
+      containnerBody.appendChild(newMain);
+
+      // 3
+      let newSectionone = document.createElement('section');
+      newSectionone.className = "center-content";
+      newMain.appendChild(newSectionone);
+
+      // 4
+      let newParapraph = document.createElement('section');
+      newParapraph.className = "center-content";
+      newParapraph.innerText = "Novo Texto para Teste."
+      newSectionone.appendChild(newParapraph);
+
+      // 5
+
+      let newSectiontwo = document.createElement('section');
+      newSectiontwo.className = "left-content";
+      newMain.appendChild(newSectiontwo);
+
+      // 6
+
+      let newSectionthree = document.createElement('section');
+      newSectionthree.className = "right-content";
+      newMain.appendChild(newSectionthree);
+
+      // 7
+
+      let newImage = document.createElement('img');
+      newImage.src = "https://picsum.photos/200";
+      newImage.className = "small-image";
+      newSectiontwo.appendChild(newImage);
+
+      // 8
+
+      let newUl = document.createElement('ul');
+      
+      let numbers = [
+        "Um",
+        "Dois",
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis",
+        "Sete",
+        "Oito",
+        "Nove",
+        "Dez" ];
+      for (let index = 0; index < numbers.length; index += 1){
+        let number = numbers[index];
+        let newLi = document.createElement('li');
+        newLi.innerText = number;
+        newSectionthree.appendChild(newUl);
+        newUl.appendChild(newLi);
+      }   
+      
+      // 9
+
+      for (index = 0; index < 3; index +=1){
+        let newH3 = document.createElement('h3');
+        // Parte 2 - Exercicio 2
+        newH3.className = 'description';
+        newMain.appendChild(newH3);
+      }
+
+      // Parte 2 - Exercicio 1
+
+      h1NewTest.className = 'title';
+
+      // Parte 2 - Exercicio 2 acima no enxercício 9.
+
+      // Parte 2 - Exercicio 3
+      let delSection = document.getElementsByClassName("left-content")[0];
+      newMain.removeChild(delSection);
+
+      // Parte 2 - Exercicio 4
+
+      newSectionthree.style.marginRight = 'auto';
+
+      // Parte 2 - Exercicio 5
+
+      newSectionone.style.backgroundColor = 'green';
+
+      // Parte 2 - Exercicio 6
+
+      let delUltimo = newUl.lastChild;
+      let delPenultimo = delUltimo.previousSibling;
+
+      newUl.removeChild(delUltimo);
+      newUl.removeChild(delPenultimo);
+
+      console.log(containnerBody);
+    </script>
+  </body>
+</html>
