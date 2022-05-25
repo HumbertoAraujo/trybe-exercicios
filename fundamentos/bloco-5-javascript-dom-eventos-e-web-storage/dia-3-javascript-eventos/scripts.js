@@ -13,10 +13,11 @@ function createDaysOfTheWeek() {
  
 
   createDaysOfTheWeek();
+  createDays();
   
   // Escreva seu código abaixo.
   // Exercício 1
-
+function createDays(){
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
   const ulPai = document.getElementById('days');
@@ -30,21 +31,26 @@ for (let index = 0; index < dezDaysList.length; index += 1){
       newLi.classList.add('holiday');
     }
     ulPai.appendChild(newLi);
+  }
 }
-
   // Exercício 2
-   let  Feriados = 'Feriados';
-  // function receivHoliday(Feriados){
-    let paiBotao = document.querySelector('.buttons-container');
-    let botaoFeriado = document.createElement('button');
+ 
+  novoBotaoFeriado("Feriados");
+  
+  function novoBotaoFeriado(Feriados){
+    const paiBotao = document.querySelector('.buttons-container');
+    const botaoFeriado = document.createElement('button');
     botaoFeriado.innerText = Feriados;
     botaoFeriado.id = 'btn-holiday';
     paiBotao.appendChild(botaoFeriado);
 
-  // }
+  }
 
   // Exercício 3
+  changeBackgroudColor();
 
+  function changeBackgroudColor(){
+  let botaoFeriado = document.getElementById('btn-holiday');
   botaoFeriado.addEventListener('click', changeColorHoliday);
   function changeColorHoliday(){
     const holidayDays = document.getElementsByClassName('holiday');
@@ -54,10 +60,37 @@ for (let index = 0; index < dezDaysList.length; index += 1){
       holidayDays[index].style.backgroundColor = "rgb(238,238,238)";
       } else {
         holidayDays[index].style.backgroundColor = "yellow"
-      }
-      
-    }
-        
+      }      
+    }        
   }
+}
+  // Exercício 4
+novoBotaoSexta("Sexta-feira");
 
-  //  console.log(holidayDays);
+  function novoBotaoSexta(sextaFeira){
+    const paiBotao = document.querySelector('.buttons-container');
+    const botaoSexta = document.createElement('button');
+    botaoSexta.innerText = sextaFeira;
+    botaoSexta.id = 'btn-friday';
+    paiBotao.appendChild(botaoSexta);
+  }
+  //  Exercício 5
+  changeTextFriday();
+  function changeTextFriday(){
+  let botaoSexta = document.getElementById('btn-friday');
+  botaoSexta.addEventListener('click', changeColorFriday);
+  function changeColorFriday(){
+    const fridayDays = document.getElementsByClassName('friday');    
+    for (index = 0; index < fridayDays.length; index += 1) {
+      const dayNumber = parseInt(fridayDays[index].previousElementSibling.innerText) + 1;
+      console.log(dayNumber);
+      if (fridayDays[index].style.color === 'blue'){
+      fridayDays[index].style.color = "#777";    
+      fridayDays[index].innerText = dayNumber;  
+      } else {
+        fridayDays[index].style.color = "blue"
+        fridayDays[index].innerText = 'Sextou';
+      }  
+    }        
+  }
+} 
