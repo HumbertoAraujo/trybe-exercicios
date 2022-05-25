@@ -13,8 +13,7 @@ function createDaysOfTheWeek() {
  
 
   createDaysOfTheWeek();
-  createDays();
-  
+    
   // Escreva seu código abaixo.
   // Exercício 1
 function createDays(){
@@ -33,9 +32,9 @@ for (let index = 0; index < dezDaysList.length; index += 1){
     ulPai.appendChild(newLi);
   }
 }
-  // Exercício 2
- 
-  novoBotaoFeriado("Feriados");
+createDays();
+
+  // Exercício 2  
   
   function novoBotaoFeriado(Feriados){
     const paiBotao = document.querySelector('.buttons-container');
@@ -43,11 +42,10 @@ for (let index = 0; index < dezDaysList.length; index += 1){
     botaoFeriado.innerText = Feriados;
     botaoFeriado.id = 'btn-holiday';
     paiBotao.appendChild(botaoFeriado);
-
   }
+  novoBotaoFeriado("Feriados");
 
-  // Exercício 3
-  changeBackgroudColor();
+  // Exercício 3  
 
   function changeBackgroudColor(){
   let botaoFeriado = document.getElementById('btn-holiday');
@@ -64,8 +62,9 @@ for (let index = 0; index < dezDaysList.length; index += 1){
     }        
   }
 }
+changeBackgroudColor();
+
   // Exercício 4
-novoBotaoSexta("Sexta-feira");
 
   function novoBotaoSexta(sextaFeira){
     const paiBotao = document.querySelector('.buttons-container');
@@ -74,8 +73,10 @@ novoBotaoSexta("Sexta-feira");
     botaoSexta.id = 'btn-friday';
     paiBotao.appendChild(botaoSexta);
   }
+  novoBotaoSexta("Sexta-feira");
+
   //  Exercício 5
-  changeTextFriday();
+  
   function changeTextFriday(){
   let botaoSexta = document.getElementById('btn-friday');
   botaoSexta.addEventListener('click', changeColorFriday);
@@ -94,3 +95,41 @@ novoBotaoSexta("Sexta-feira");
     }        
   }
 } 
+changeTextFriday();
+
+//  Exercício 6
+
+
+function zoomEfect(){
+
+  let daysNumbers = document.getElementById('days');
+  daysNumbers.addEventListener('mouseover', function (event){
+    event.target.style.fontSize = '30px';
+  })   
+}
+
+function OutZoomEfect(){
+
+  let daysNumbers = document.getElementById('days');
+  daysNumbers.addEventListener('mouseout', function (event){
+    event.target.style.fontSize = '20px';
+  })   
+}
+
+zoomEfect();
+OutZoomEfect();
+
+//  Exercício 7
+
+function newTask(receivedInput){
+
+const paiTasks = document.querySelector(".my-tasks");
+let newTask = document.createElement('span');
+newTask.innerText = receivedInput;
+paiTasks.appendChild(newTask);
+newTask.style.display = 'block';
+}
+newTask("Nova Tarefa");
+
+
+  
