@@ -119,4 +119,9 @@
         width: 40%;
         margin: 50px;
     }
+    p {
+        margin-left: 400px;
+        margin-right: 400px;
+        font-size: 2em;
+    }
 }
