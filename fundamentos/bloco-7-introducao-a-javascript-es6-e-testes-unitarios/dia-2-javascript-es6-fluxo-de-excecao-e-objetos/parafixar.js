@@ -302,17 +302,17 @@
 // const cloneObj = obj;
 
 
-// const person = {
-//   name:'Roberto',
-// };
+const person = {
+  name:'Roberto',
+};
 
-// const lastName = {
-//   lastName: 'Silva',
-// };
+const lastName = {
+  lastName: 'Silva',
+};
 
-// const newPerson = Object.assign({},person,lastName);
-// newPerson.name = 'Gilberto';
-// console.log(`${Object.values(person)[0]} ${Object.values(lastName)[0]}`);
-// console.log(`${Object.values(newPerson)[0]} ${Object.values(newPerson)[1]}`);
+const newPerson = Object.assign({},person,lastName);
+newPerson.name = 'Gilberto';
+console.table(`${Object.values(person)[0]} ${Object.values(lastName)[0]}`);
+console.table(`${Object.values(newPerson)[0]} ${Object.values(newPerson)[1]}`);
 
 
