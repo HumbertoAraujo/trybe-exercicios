@@ -75,7 +75,22 @@ function decode(string) {
 
 }
 
+function techList(array, nameReceived) {
+  array.sort();
+  const empty = 'Vazio!';
+  const newArray = [];
+  if ((array.length == 0) || (nameReceived.length == 0)){
+      return empty;      
+  } else {
+       for (const tech of array){
+          newArray.push({ 
+          tech: tech,
+          name: nameReceived
+          })
+      }
+      }
+  return newArray;
+    
+}
 
-
-
-module.exports = {sum , myRemove, myFizzBuzz, encode, decode};
+module.exports = {sum , myRemove, myFizzBuzz, encode, decode, techList};
