@@ -166,23 +166,30 @@ const getValueByNumber = (objeto, position) =>  {
   // const array = Object.values(objeto);  
   // console.log(array[position]);
   // ou
-  console.log(Object.values(objeto)[position]);
+  // console.log(Object.values(objeto)[position]);
 }
 getValueByNumber(lesson1, 0);
 
 // exercício 8
 
 const verifyPair = (objeto, chave, valor) => {
-  if(objeto[chave] === valor) {
-    // console.log(true);
+  if(objeto[chave] === valor) {    
     return true;
-  } else {
-    // console.log(false);
-    return false;
-    }
+  } return false;    
 };
 
-// verifyPair(lesson3, 'materia', 'Maria Clara');
+// ou 
+
+// const verifyPair = (obj, key, value) => {
+//   const arr = Object.entries(obj);
+//   let isEqual = false;
+//   for (let index in arr) {
+//     if (arr[index][0] === key && arr[index][1] === value) isEqual = true;
+//   }
+//   return isEqual;
+// };
+
+console.log(typeof(verifyPair(lesson2,'professor','Carlos')));
 
 // console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
