@@ -88,7 +88,7 @@ describe('Exercício 4', () => {
 
 // 
 
-describe('Testa a função techList', () => {
+describe('Exercício 5 - Testa a função techList', () => {
   it('Testa se a função techList é definida', () => {
     expect(techList).toBeDefined();
   });
@@ -124,5 +124,47 @@ describe('Testa a função techList', () => {
   });
 });
 
+describe('Exercício 6 - Testa a função hydrate', () => {
+  it('Testa se a função hydrate é definida', () => {
+    expect(hydrate).toBeDefined();
+  });
+  it('Testa se hydrate é uma função', () => {
+    expect(typeof hydrate).toBe('function');
+  });
+  it('Ao receber uma string retorne a sugestão de quantos copos de água deve-se beber', () => {
+    expect(hydrate('1 cerveja')).toBe('1 copo de água');
+    expect(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho')).toBe('7 copos de água');
+    expect(hydrate('2 shots de tequila, 2 cervejas e 1 corote')).toBe('5 copos de água');
+    expect(hydrate('1 copo de catuaba, 1 cervejas e 1 copo de vinho')).toBe('3 copos de água');
+    expect(hydrate('4 caipirinhas e 2 cervejas')).toBe('6 copos de água');
+  });
+});
 
-const {sum , myRemove, myFizzBuzz, encode, decode, techList} = require('./sum.js');
+// ######################################################################################
+
+describe('Exercício Bônus', () => {
+  it ('1-Teste se a função searchEmployee existe', () => {
+    expect(typeof(searchEmployee)).toBe('function');
+  });
+
+  it ('2-Teste se passando o id do Funcionário como primeiro parâmetro, e o nome de uma chave, se retorna o objeto correto do funcionário', () => {
+    expect(searchEmployee('9852-2-2', 'lastName' )).toEqual(
+      {
+        id: '9852-2-2',
+        firstName: 'Jeff',
+        lastName: 'Cook',
+        specialities: ['Ruby', 'SQL'],
+      }
+    );
+  });
+
+  it ('3-Teste passando um ID que não consta no cadastro, deve retornar o erro "ID não identificada"', () => {
+    expect(searchEmployee('1234-5')).toEqual("ID não identificada");
+  });
+
+  it ('4-Teste se a informação passada no segundo parâmetro não existir, deve retornar o erro "Informação indisponível"', () => {
+    expect(searchEmployee('4678-2' , 'age')).toEqual('"Informação indisponível"');
+  });
+});
+
+const {sum , myRemove, myFizzBuzz, encode, decode, techList, hydrate, searchEmployee} = require('./sum.js');
