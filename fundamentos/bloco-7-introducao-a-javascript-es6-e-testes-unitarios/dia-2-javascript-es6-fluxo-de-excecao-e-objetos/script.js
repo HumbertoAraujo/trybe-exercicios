@@ -166,25 +166,92 @@ const getValueByNumber = (objeto, position) =>  {
   // const array = Object.values(objeto);  
   // console.log(array[position]);
   // ou
-  console.log(Object.values(objeto)[position]);
+  // console.log(Object.values(objeto)[position]);
 }
 getValueByNumber(lesson1, 0);
 
 // exercício 8
 
 const verifyPair = (objeto, chave, valor) => {
-  if(objeto[chave] === valor) {
-    // console.log(true);
+  if(objeto[chave] === valor) {    
     return true;
-  } else {
-    // console.log(false);
-    return false;
-    }
+  } return false;    
 };
 
-// verifyPair(lesson3, 'materia', 'Maria Clara');
+// ou 
+
+// const verifyPair = (obj, key, value) => {
+//   const arr = Object.entries(obj);
+//   let isEqual = false;
+//   for (let index in arr) {
+//     if (arr[index][0] === key && arr[index][1] === value) isEqual = true;
+//   }
+//   return isEqual;
+// };
+
+// console.log(typeof(verifyPair(lesson2,'professor','Carlos')));
 
 // console.log(verifyPair(lesson3, 'turno', 'noite'));
 // Output: true,
 // console.log(verifyPair(lesson3, 'materia', 'Maria Clara'));
 // Output: false
+
+// BÔNUS
+// EXERCÍCIO 1
+
+// console.table(allLessons);
+
+const countMatClass = (materia) => {
+  const turmas = Object.keys(allLessons);
+  let soma = 0;
+  for (index = 0; index < turmas.length; index += 1) {
+    if(allLessons[turmas[index]].materia === materia) {
+      soma += allLessons[turmas[index]].numeroEstudantes;
+      // return soma;
+    }   
+  }
+  console.log(`O total de Estudantes que assistiram as aulas de Matemática foram: ${soma}.`);
+}
+
+// countMatClass('História');
+
+const createReport = (turma, professor) => {
+  const turmas = Object.keys(turma);
+  let soma = 0;
+  let aulas = [];
+  const newObject = {};
+  for (index = 0; index < turmas.length; index += 1) {
+    if(turma[turmas[index]].professor === professor) {
+      aulas.push(turma[turmas[index]].materia);
+      soma += turma[turmas[index]].numeroEstudantes;       
+    }     
+  }
+  newObject.professor = professor;
+  newObject.aulas = aulas;
+  newObject.estudantes = soma;
+  return newObject;
+}
+
+// OU 
+
+// const getInfo = (obj, name) => {
+//   const allLessons = [];
+//   let allStudent = 0;
+//   const array = Object.values(obj);
+//   for (index in array) {
+//     if (array[index].professor === name) {
+//       allLessons.push(array[index].materia)
+//       allStudent += array[index].numeroEstudantes;
+//     }
+//   }
+//   return { lessons: allLessons, estudantes: allStudent };
+// }
+
+// const createReport = (allLessons, name) => {
+//   const report = {};
+//   report.professor = name;
+//   Object.assign(report, getInfo(allLessons, name));
+//   return report;
+// }
+
+console.log(createReport(allLessons, 'Maria Clara'))
