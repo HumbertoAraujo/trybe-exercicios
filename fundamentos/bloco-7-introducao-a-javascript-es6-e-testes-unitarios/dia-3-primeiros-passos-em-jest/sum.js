@@ -149,21 +149,32 @@ const professionalBoard = [
   },
 ];
 
-const searchEmployee = (id, detail) => {
-  const erro1 = "ID não identificada";
-  const erro2 = "Informação indisponível";
-
-  if (detail === 'id' || detail === 'firstName' ||detail === 'lastName' ||detail === 'specialities'){
-    for (let index = 0; index < professionalBoard.length; index += 1){    
-      if (professionalBoard[index].id === id){     
-        return professionalBoard[index];             
-      }    
+const verifyIsValid = (index, detail) => {
+  let count = 0;
+  for (key in professionalBoard[index]){
+    if (key === detail){
+      count += 1;
     }
-     return erro1;  
-  };
+  }
+  if (count === 0) {
+    throw new Error ("Informação indisponível"); 
+  }
+}
 
-  return erro2;
-
+const searchEmployee = (id, detail) => {
+  
+  try {
+    for (let index = 0; index < professionalBoard.length; index += 1){    
+      if (professionalBoard[index].id === id){   
+        verifyIsValid(index, detail);
+        return professionalBoard[index][detail];             
+      }    
+    } 
+    throw new Error ("ID não identificada")
+  }   
+  catch (error) {
+    return error.message;
+  }
 }
 
 module.exports = {sum , myRemove, myFizzBuzz, encode, decode, techList, hydrate, searchEmployee};

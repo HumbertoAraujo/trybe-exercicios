@@ -147,23 +147,25 @@ describe('Exercício Bônus', () => {
     expect(typeof(searchEmployee)).toBe('function');
   });
 
-  it ('2-Teste se passando o id do Funcionário como primeiro parâmetro, e o nome de uma chave, se retorna o objeto correto do funcionário', () => {
-    expect(searchEmployee('9852-2-2', 'lastName' )).toEqual(
-      {
-        id: '9852-2-2',
-        firstName: 'Jeff',
-        lastName: 'Cook',
-        specialities: ['Ruby', 'SQL'],
-      }
-    );
+  it ('2-Teste se passando o id do Funcionário como primeiro parâmetro, e o nome da chave que quer a informação, se retorna a informação correta do funcionário', () => {
+    expect(searchEmployee('9852-2-2', 'lastName' )).toBe('Cook');
   });
 
   it ('3-Teste passando um ID que não consta no cadastro, deve retornar o erro "ID não identificada"', () => {
-    expect(searchEmployee('1234-5')).toEqual("ID não identificada");
+    // expect(searchEmployee('1234-5')).toThrowError(new Error("ID não identificada"));
+    expect(searchEmployee('1234-5')).toBe("ID não identificada");
+    // expect(searchEmployee('1234-5')).toThrow();
+
   });
 
   it ('4-Teste se a informação passada no segundo parâmetro não existir, deve retornar o erro "Informação indisponível"', () => {
-    expect(searchEmployee('4678-2' , 'age')).toEqual('"Informação indisponível"');
+    expect(searchEmployee('9852-2-2' , 'age')).toBe("Informação indisponível");
+    // expect(searchEmployee('9852-2-2' , 'age')).toThrow();
+
+    // expect(searchEmployee('9852-2-2' , 'age')).toThrowError(new Error("Informação indisponível"));
+  });
+  it ('5-Testa se searchEmployee(id, "specialities") retorna um array com todas as habilidades do id pesquisado"', () => {
+    expect(searchEmployee('1256-4' , 'specialities')).toEqual(['Hooks', 'Context API', 'Tailwind CSS']);
   });
 });
 
