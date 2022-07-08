@@ -10,10 +10,8 @@ body {
   padding: 10px;
 }
 .list-group {
-
   border-radius: 10px; 
-  background-color: rgb(112, 117, 116);
-  opacity: 60%;
+  background-color: rgba(112, 117, 116, 25%);
   padding: 40px;
 }
 .list-group-item {
@@ -23,5 +21,6 @@ body {
 }
 .list-group-item:hover {
   background-color: darkblue;
-  color: white;  
+  color: white; 
+  font-weight: 1000; 
 }
