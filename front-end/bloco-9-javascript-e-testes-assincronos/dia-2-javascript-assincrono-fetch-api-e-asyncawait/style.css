@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  margin-top: 5%;
+  background-color: rgb(9, 24, 37); 
+  color: white; 
+}
+#section-list {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.list-group {
+  border-radius: 10px; 
+  background-color: rgba(112, 117, 116, 25%);
+  padding: 40px;
+}
+.list-group-item {
+  border-radius: 10px;
+  width: 500px;
+  margin: 1px; 
+}
+.list-group-item:hover {
+  background-color: darkblue;
+  color: white; 
+  font-weight: 1000; 
+}
