@@ -1,32 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from "react";
 
-function App() {
-  const a = 1;
-  const b = 7;
+// const textJSX = "Hello, JSX";
+// const ElementH1 = <h1>{textJSX}</h1>;
 
-  return (    
-    <div className="App">      
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <a>"Hello Word"</a>
-        <img className="App-logo image-test" src="https://conteudo.imguol.com.br/c/noticias/1c/2022/05/24/imagem-criada-no-imagen-prototipo-do-google-que-cria-imagens-baseadas-em-texto-neste-caso-um-cachorro-corgi-andando-de-bicicleta-na-times-square-usando-oculos-de-sol-e-chapeu-de-praia-1653397634334_v2_900x506.jpg.webp" />        
-      </header>
-      <div>Texto <br></br> <strong>{a+b}</strong> <hr></hr>
-      </div>
-    </div>
-  );
+// export default function App() {
+//   return (
+//     <div className="App">{ElementH1}</div>
+//   )
+// }
+
+import React from 'react';
+import About from './About';
+
+class App extends React.Component {
+  render() {
+    const teste = <p>teste testado</p>;
+    return (
+      <main>
+    <About/>
+    <h1>{teste}</h1>
+    </main>
+    );
+  }
 }
 
 export default App;
