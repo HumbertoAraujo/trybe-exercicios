@@ -1,0 +1,51 @@
+.label-form {
+  display: flex;
+  flex-direction: column;
+}
+fieldset {
+  width: 500px;
+}
+
+.container-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-buttons {
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+
+}
+
+.inputs , select {
+  width: 200px;
+  margin: 10px 0px;
+}
+
+.container-radios {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.descricaoCargo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+
+textarea {
+  margin-top: 10px;
+  resize: none;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#descricaoCargo {
+  margin-left: 10px;
+}
